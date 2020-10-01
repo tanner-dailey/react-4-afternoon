@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import {Link} from 'react-router-dom';
+import {Link, Switch, Route} from 'react-router-dom';
 
 export default class ClassList extends Component {
   constructor() {
@@ -29,6 +29,13 @@ export default class ClassList extends Component {
         <h1>{this.props.match.params.class}</h1>
         <h2>ClassList:</h2>
         {students}
+        <Link to='/'>
+          <button>Back</button>
+        </Link>
+
+        <Switch>
+          <Route path='/' />
+        </Switch>
       </div>
     )
   }
